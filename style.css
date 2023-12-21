@@ -30,9 +30,11 @@ body {
     background-repeat: repeat;
 }
 
-header h1 {
-    margin: 100px 0 50px 0;
+header {
+    padding-top: 50px;
+}
 
+header h1 {
     background-image: linear-gradient(90deg, #ffee00 35%, #ff50f0, #3A86FF, #50ffdf 70%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -50,16 +52,21 @@ header h1 {
     text-transform: uppercase;
 }
 
-.interaction {
+main {
+    width: 900px;
+    margin: auto;
+    padding: 100px 0 50px 0;
+
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    ;
+    flex-wrap: wrap;
+    gap: 50px;
 }
 
 .stats {
+    flex-basis: 100%;
     display: flex;
+    justify-content: center;
     gap: 4rem;
 
     font-family: "LCD", sans-serif;
@@ -69,7 +76,7 @@ header h1 {
 }
 
 .number {
-    margin: 5rem 0;
+    margin: 0;
     width: 30rem;
     height: 30rem;
 
@@ -96,8 +103,8 @@ header h1 {
     background-size: cover;
 
     font-family: 'Open Sans', sans-serif;
-    font-size: 200px;
-    line-height: 1.5em;
+    font-size: 159px;
+    line-height: 2em;
     letter-spacing: 5px;
     font-weight: 700;
 
@@ -106,6 +113,14 @@ header h1 {
 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.interaction {
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .message {
@@ -123,13 +138,23 @@ header h1 {
 
 }
 
+.input-wrap{
+    margin: 20px 0;
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 20px;
+}
+
 
 .interaction input {
-    margin: 1rem 0 3rem 0;
     padding: 0 15px;
 
-    width: 350px;
-    height: 50px;
+    width: 100%;
+    height: 55px;
 
     background-color: hsla(0, 4%, 4%, 1);
 
@@ -138,7 +163,9 @@ header h1 {
     border-radius: 15em;
 
     font-family: "LCD", sans-serif;
-    font-size: 15px;
+    font-size: 28px;
+    text-align: center;
+
     color: white;
 }
 
@@ -157,8 +184,8 @@ input[type=number] {
 }
 
 .btn {
-    width: 160px;
-    height: 40px;
+    width: 47%;
+    height: 50px;
 
     border-radius: 15em;
     border: none;
@@ -178,6 +205,70 @@ input[type=number] {
     text-align: center;
 }
 
-.check {
-    margin-right: 2rem;
+.reset-mobile {
+    display: none;
+}
+
+/*Adaptation*/
+
+@media screen and (max-width: 1280px) {
+
+    main {
+        padding: 50px 0 50px 0;
+    }
+    
+}
+
+@media screen and (max-width: 820px) {
+
+    main {
+        width: 350px;
+    }
+
+    .interaction input {
+        width: 37%;
+    }
+
+    .check {
+        width: 37%;
+    }
+
+    .reset-mobile{
+        width: 50px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .reset-mobile img{
+        width: 50%;
+    }
+
+    .reset {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 415px) {
+
+    header h1 {
+        font-size: 60px;
+    }
+    
+}
+
+@media screen and (max-width: 375px) {
+
+    header h1 {
+        font-size: 50px;
+    }
+
+    .stats{
+        gap: 2rem;
+
+        font-size: 15px;
+    }
+    
 }

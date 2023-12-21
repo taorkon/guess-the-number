@@ -19,25 +19,28 @@
 
   </header>
   <main>
+    <section class="stats">
+      <p class="label-attempts">
+        Attemps left: <span class="attempts">6</span>
+      </p>
+      <p class="label-record">
+        Record: <span class="record">0</span>
+      </p>
+    </section>
+    <section class="number">
+      <p class="number-display">?</p>
+    </section>
     <section class="interaction">
-      <div class="stats">
-        <p class="label-attempts">
-          Attemps left: <span class="attempts">20</span>
-        </p>
-        <p class="label-record">
-          Record: <span class="record">0</span>
-        </p>
-      </div>
-      <div class="number">
-        <p class = "number-display">?</p>
-      </div>
       <div class="message-wrapper">
         <p class="message">Type a number between 1 & 20...</p>
       </div>
-      <input type="number" class="guess" />
-      <div class="btn-wrap">
+      <div class="input-wrap">
+        <input type="number" class="guess" min="1" max="20" />
         <button class="btn check">Check</button>
         <button class="btn reset">Reset</button>
+        <button class="btn reset-mobile">
+          <img src="assets/images/svg/reset.svg" alt="Icon for the button that resets the game" class="reset-icon">
+        </button>
       </div>
     </section>
   </main>
