@@ -138,7 +138,7 @@ main {
 
 }
 
-.input-wrap{
+.input-wrap {
     margin: 20px 0;
     width: 100%;
 
@@ -216,7 +216,6 @@ input[type=number] {
     main {
         padding: 50px 0 50px 0;
     }
-    
 }
 
 @media screen and (max-width: 820px) {
@@ -233,7 +232,7 @@ input[type=number] {
         width: 37%;
     }
 
-    .reset-mobile{
+    .reset-mobile {
         width: 50px;
 
         display: flex;
@@ -241,14 +240,13 @@ input[type=number] {
         justify-content: center;
     }
 
-    .reset-mobile img{
+    .reset-mobile img {
         width: 50%;
     }
 
     .reset {
         display: none;
     }
-    
 }
 
 @media screen and (max-width: 415px) {
@@ -256,7 +254,6 @@ input[type=number] {
     header h1 {
         font-size: 60px;
     }
-    
 }
 
 @media screen and (max-width: 375px) {
@@ -265,10 +262,26 @@ input[type=number] {
         font-size: 50px;
     }
 
-    .stats{
+    .stats {
         gap: 2rem;
 
         font-size: 15px;
     }
-    
+}
+
+@media screen and (max-height: 640px) {
+
+    main {
+        padding: 50px 0 40px 0;
+        gap: 30px;
+    }
+
+    .number {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .number p {
+        font-size: 100px;
+    }
 }
