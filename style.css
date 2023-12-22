@@ -31,7 +31,7 @@ body {
 }
 
 header {
-    padding-top: 50px;
+    padding: 12vh 0 8vh 0;
 }
 
 header h1 {
@@ -43,7 +43,7 @@ header h1 {
     -webkit-text-fill-color: transparent;
 
     font-family: 'LCD', sans-serif;
-    font-size: 100px;
+    font-size: 8vw;
     line-height: 1em;
     letter-spacing: 0px;
     font-weight: 500;
@@ -53,12 +53,13 @@ header h1 {
 }
 
 main {
-    width: 900px;
+    /*width: 90vw;*/
     margin: auto;
-    padding: 100px 0 50px 0;
+    padding-top: 5vh;
 
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 50px;
 }
@@ -70,15 +71,15 @@ main {
     gap: 4rem;
 
     font-family: "LCD", sans-serif;
-    font-size: 20px;
+    font-size: 1.7vw;
 
     text-transform: lowercase;
 }
 
 .number {
     margin: 0;
-    width: 30rem;
-    height: 30rem;
+    width: 20vw;
+    height: 20vw;
 
     display: flex;
     justify-content: center;
@@ -89,6 +90,7 @@ main {
 
     background-image: radial-gradient(black, hsla(0, 4%, 4%, 1)),
         url('assets/images/gif/h1-5.gif');
+    background-size: cover;
     background-origin: border-box;
     background-clip: content-box, border-box;
 }
@@ -103,7 +105,7 @@ main {
     background-size: cover;
 
     font-family: 'Open Sans', sans-serif;
-    font-size: 159px;
+    font-size: 10vw;
     line-height: 2em;
     letter-spacing: 5px;
     font-weight: 700;
@@ -116,7 +118,7 @@ main {
 }
 
 .interaction {
-    width: 30rem;
+    width: 20vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -132,9 +134,10 @@ main {
 
 
     font-family: "LCD", sans-serif;
-    font-size: 14px;
+    font-size: 1.5vw;
 
     text-transform: lowercase;
+    text-align: center;
 
 }
 
@@ -149,12 +152,11 @@ main {
     row-gap: 20px;
 }
 
-
 .interaction input {
     padding: 0 15px;
 
     width: 100%;
-    height: 55px;
+    height: 4vw;
 
     background-color: hsla(0, 4%, 4%, 1);
 
@@ -163,7 +165,7 @@ main {
     border-radius: 15em;
 
     font-family: "LCD", sans-serif;
-    font-size: 28px;
+    font-size: 2vw;
     text-align: center;
 
     color: white;
@@ -185,7 +187,7 @@ input[type=number] {
 
 .btn {
     width: 47%;
-    height: 50px;
+    height: 4vw;
 
     border-radius: 15em;
     border: none;
@@ -195,7 +197,7 @@ input[type=number] {
     background-attachment: fixed;
 
     font-family: "Open Sans", sans-serif;
-    font-size: 20px;
+    font-size: 2vw;
     font-weight: 700;
     letter-spacing: 1px;
 
@@ -209,8 +211,177 @@ input[type=number] {
     display: none;
 }
 
-/*Adaptation*/
+@media screen and (orientation: portrait) and (min-height: 1000px) {
+    
+    header {
+        padding: 5vh 0 3vh 0;
+    }
 
+    main{
+        flex-direction: column;
+        gap: 5vh;
+    }
+
+    .stats {
+        font-size: 3vw;
+    }
+    
+    .number {
+        width: 45vw;
+        height: 45vw;
+    }
+
+    .number p{
+        font-size: 25vw;
+    }
+
+    .interaction {
+        width: 45vw;
+    }
+
+    .message {
+        font-size: 2.5vw;
+    }
+
+    .interaction input {
+        height: 9vw;
+        width: 37%;
+        font-size: 3vw;
+    }
+
+    .btn {
+        height: 9vw;
+        font-size: 3.5vw;
+    }
+
+    .check {
+        width: 37%;
+    }
+
+    .reset-mobile {
+        width: 9vw;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .reset-mobile img {
+        width: 50%;
+    }
+
+    .reset {
+        display: none;
+    }
+}
+
+@media screen and (orientation: portrait) and (max-height: 1000px) {
+    
+    header {
+        padding: 8vh 0 4vh 0;
+    }
+
+    header h1 {
+        max-width: 90%;
+        margin: auto;
+        font-size: 12vw;
+        
+    }
+
+    main{
+        flex-direction: column;
+        gap: 8vh;
+    }
+
+    .stats {
+        font-size: 5vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1vh;
+    }
+    
+    .number {
+        width: 65vw;
+        height: 65vw;
+    }
+
+    .number p{
+        font-size: 32.5vw;
+    }
+
+    .interaction {
+        width: 60vw;
+    }
+
+    .message {
+        font-size: 5vw;
+    }
+
+    .interaction input {
+        height: 12vw;
+        width: 37%;
+        font-size: 5vw;
+    }
+
+    .btn {
+        height: 12vw;
+        font-size: 4.5vw;
+    }
+
+    .check {
+        width: 37%;
+    }
+
+    .reset-mobile {
+        width: 12vw;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .reset-mobile img {
+        width: 50%;
+    }
+
+    .reset {
+        display: none;
+    }
+}
+
+@media screen and (orientation: portrait) and (max-height: 850px) {
+    .number {
+        width: 60vw;
+        height: 60vw;
+    }
+
+    .number p {
+        font-size: 30vw;
+    }
+}
+
+@media screen and (orientation: portrait) and (max-height: 720px) {
+    
+    header {
+        padding: 7vh 0 5vh 0;
+    }
+
+    main{
+        padding-top: 0;
+        gap: 6vh;
+    }
+}
+
+@media screen and (orientation: portrait) and (max-height: 640px) {
+    
+    header {
+        padding: 5vh 0 3vh 0;
+    }
+}
+
+/*Adaptation*/
+/*
 @media screen and (max-width: 1280px) {
 
     main {
@@ -288,4 +459,4 @@ input[type=number] {
     .number p {
         font-size: 100px;
     }
-}
+}*/
