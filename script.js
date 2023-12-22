@@ -7,6 +7,12 @@ function reset() {
     message.textContent = `Type a number between 1 & 20...`;
     input.value = "";
     newGame.play();
+
+    loseSound.pause();
+    loseSound.currentTime = 0;
+
+    winSound.pause();
+    winSound.currentTime = 0;
 }
 
 //Check function
@@ -15,15 +21,13 @@ function check() {
 
     //Invalid input
     if (guess === "") {
-        message.textContent = `ooops
-        try again...`;
+        message.textContent = `ooops try again...`;
         mistakeSound.play();
 
         //Guess is right
     } else if (+guess === secretNumber) {
         numberDisplay.textContent = secretNumber;
-        message.textContent = `you
-        won!`;
+        message.textContent = `you won!`;
         winSound.play();
 
         record = (record === 0) || (record > (6 - attempts)) ? (7 - attempts) : record;
@@ -33,16 +37,14 @@ function check() {
     } else if (+guess !== secretNumber) {
         if (attempts > 1) {
             if (+guess > secretNumber) {
-                message.textContent = `try
-                lower`;
+                message.textContent = `try lower`;
                 mistakeSound.play();
 
                 attempts--;
                 attemptsHTML.textContent = attempts;
                 input.value = "";
             } else if (+guess < secretNumber) {
-                message.textContent = `try
-                higher`;
+                message.textContent = `try higher`;
                 mistakeSound.play();
 
                 attempts--;
@@ -51,14 +53,16 @@ function check() {
             }
         } else {
             numberDisplay.textContent = '×';
-            message.textContent = `you
-            lost`;
+            message.textContent = `you lost`;
             loseSound.play();
 
             attemptsHTML.textContent = 0;
             input.value = "";
         }
     }
+
+    newGame.pause();
+    newGame.currentTime = 0;
 }
 
 //Numbers for the game
